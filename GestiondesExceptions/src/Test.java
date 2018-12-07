@@ -9,13 +9,16 @@ public class Test {
 		System.out.print("Type a second number : ");
 		int y = sca.nextInt();
 		try {
+			int z = x / y;
+			System.out.println(z);
 
-			System.out.println(x / y);
-
-		} catch (Exception e) {
+		} catch (ArithmeticException e) {
 
 			System.out.println("Une exception a été levée : division par zero !");
-
+		}
+		
+		finally {
+			System.out.println("fin du programe ! ");
 		}
 	}
 }
